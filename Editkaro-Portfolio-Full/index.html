@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editkaro.in — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Editkaro.in</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Creative Video Editing Portfolio</h1>
+      <p>Showcasing the work of Editkaro.in</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="filters" class="filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="short">Short-form</button>
+      <button class="filter-btn" data-category="long">Long-form</button>
+      <button class="filter-btn" data-category="gaming">Gaming</button>
+      <button class="filter-btn" data-category="ads">Ads</button>
+      <button class="filter-btn" data-category="anime">Anime</button>
+    </section>
+
+    <section id="portfolio" class="portfolio-grid">
+      <div class="card" data-category="short">
+        <img src="assets/thumb1.png" alt="Short Video">
+        <h3>Short Video</h3>
+        <button onclick="openModal('https://www.youtube.com/embed/5OOYDHiosD0')">Watch</button>
+      </div>
+      <div class="card" data-category="long">
+        <img src="assets/thumb2.png" alt="Long Video">
+        <h3>Long Video</h3>
+        <button onclick="openModal('https://www.youtube.com/embed/aqz-KE-bpKQ')">Watch</button>
+      </div>
+      <div class="card" data-category="gaming">
+        <img src="assets/thumb3.png" alt="Gaming Video">
+        <h3>Gaming</h3>
+        <button onclick="openModal('https://www.youtube.com/embed/2g811Eo7K8U')">Watch</button>
+      </div>
+      <div class="card" data-category="ads">
+        <img src="assets/thumb4.png" alt="Ad Video">
+        <h3>Ad Campaign</h3>
+        <button onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">Watch</button>
+      </div>
+      <div class="card" data-category="anime">
+        <img src="assets/thumb5.png" alt="Anime Video">
+        <h3>Anime Edit</h3>
+        <button onclick="openModal('https://www.youtube.com/embed/tgbNymZ7vqY')">Watch</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="videoFrame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <p>© 2025 Editkaro.in | Designed By Rishikant Yadav</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

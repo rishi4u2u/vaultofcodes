@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Recipe Card — Chocolate Cake</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="An interactive recipe card with animations, transitions, and basic JS interactivity." />
+  
+</head>
+<body>
+
+  <script src="script.js" defer></script>
+  <main class="card" role="article" aria-labelledby="title">
+    <!-- HERO -->
+    <header class="hero" aria-label="Chocolate Cake image banner">
+      <!-- Dish image (royalty-free placeholder) -->
+      <img src="photo.jpg" alt="A decadent chocolate cake with glossy frosting" />
+      <div class="titlewrap">
+        <h1 id="title">Chocolate Cake</h1>
+        <div class="meta">
+          <span class="badge" aria-label="Prep time"><strong>Prep:</strong>&nbsp;20m</span>
+          <span class="badge" aria-label="Cook time"><strong>Cook:</strong>&nbsp;30m</span>
+          <span class="badge" aria-label="Servings"><strong>Serves:</strong>&nbsp;8</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+      <!-- LEFT: Ingredients + Steps -->
+      <div class="left">
+        <section aria-labelledby="ingredients-h2">
+          <div class="togglebar">
+            <h2 id="ingredients-h2" style="margin-right:auto">Ingredients</h2>
+            <button class="ghost" id="toggle-ingredients" aria-expanded="true" aria-controls="ingredients-list">Hide</button>
+          </div>
+          <ul id="ingredients-list">
+            <li data-tip="120g">1 cup all-purpose flour</li>
+            <li>1 cup sugar</li>
+            <li>1/3 cup cocoa powder</li>
+            <li>1 tsp baking soda</li>
+            <li>1/2 tsp salt</li>
+            <li>1 egg</li>
+            <li>1/2 cup milk</li>
+            <li>1/4 cup vegetable oil</li>
+            <li>1 tsp vanilla extract</li>
+            <li>1/2 cup hot coffee or water</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="steps-h2">
+          <div class="togglebar">
+            <h2 id="steps-h2" style="margin-right:auto">Steps</h2>
+            <div class="controls" role="group" aria-label="Cooking controls">
+              <button id="start" class="ok">Start Cooking</button>
+              <button id="next" class="ghost" disabled>Next Step</button>
+              <button id="reset" class="danger ghost">Reset</button>
+            </div>
+          </div>
+
+          <ol id="steps-list">
+            <li class="step">Preheat oven to 350°F (175°C). Grease a 9-inch pan.</li>
+            <li class="step">Whisk dry ingredients: flour, sugar, cocoa, baking soda, salt.</li>
+            <li class="step">Add egg, milk, oil, and vanilla; mix until smooth.</li>
+            <li class="step">Stir in hot coffee (or water) until batter is thin and glossy.</li>
+            <li class="step">Pour into pan; bake 28–32 minutes. Cool completely.</li>
+            <li class="step">Frost as desired. Slice and enjoy!</li>
+          </ol>
+
+          <div class="progresswrap" aria-label="Progress">
+            <div id="progress" class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+          </div>
+          <div class="ptext"><span id="progress-text">0%</span> complete · <span id="timer">00:00</span></div>
+        </section>
+      </div>
+
+      <!-- RIGHT: Quick stats & actions -->
+      <aside class="stats" aria-label="Recipe quick stats">
+        <section>
+          <div class="statsgrid">
+            <div class="stat"><h3>20m</h3><p>Prep Time</p></div>
+            <div class="stat"><h3>30m</h3><p>Cook Time</p></div>
+            <div class="stat"><h3>8</h3><p>Servings</p></div>
+          </div>
+          <hr style="opacity:.12; margin: 16px 0; border:none; border-top:1px solid rgba(255,255,255,.12)" />
+          <div class="togglebar" style="gap:8px; align-items:center">
+            <button id="print" class="ghost">Print Recipe</button>
+            <button id="show-all">Show All</button>
+            <button id="hide-all" class="ghost">Hide All</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  
+</body>
+</html>

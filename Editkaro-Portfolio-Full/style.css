@@ -1,0 +1,21 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial, sans-serif;background:#111;color:#eee;line-height:1.6}
+header{background:#222;padding:10px 20px}
+.navbar{display:flex;justify-content:space-between;align-items:center}
+.navbar .logo{font-size:1.5em;font-weight:bold;color:#f04}
+.navbar .nav-links{list-style:none;display:flex;gap:15px}
+.navbar .nav-links a{color:#eee;text-decoration:none}
+.hero{text-align:center;padding:50px 20px}
+.hero h1{font-size:2.5em;margin-bottom:10px}
+.filters{text-align:center;margin:20px}
+.filter-btn{padding:10px 20px;margin:5px;background:#333;color:#eee;border:none;cursor:pointer;border-radius:5px}
+.filter-btn.active,.filter-btn:hover{background:#f04;color:#fff}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px}
+.card{background:#222;padding:15px;border-radius:10px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,0.5)}
+.card img{width:100%;border-radius:10px}
+.card h3{margin:10px 0}
+.card button{padding:8px 15px;background:#f04;color:#fff;border:none;border-radius:5px;cursor:pointer}
+.modal{display:none;position:fixed;z-index:100;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8)}
+.modal-content{background:#111;margin:10% auto;padding:20px;border-radius:10px;max-width:700px}
+.close{color:#fff;float:right;font-size:28px;cursor:pointer}
+footer{text-align:center;padding:20px;background:#222;margin-top:20px}

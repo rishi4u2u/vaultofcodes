@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #BB86FC;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.home-content {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #BB86FC;
+    margin-bottom: 1rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background: #2c2c2c;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-list li {
+    background: #2c2c2c;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    list-style: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1f1f1f;
+    color: #999;
+    margin-top: 2rem;
+}
