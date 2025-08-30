@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MyShop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Cart (<span id="cart-count">0</span>)</a>
+      <a href="#" id="login-btn">Login</a>
+      <span id="user-display"></span>
+    </nav>
+  </header>
+
+  <!-- Search & Filter -->
+  <section class="controls">
+    <input type="text" id="search" placeholder="Search products...">
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="low">Below $50</option>
+      <option value="medium">$50 - $100</option>
+      <option value="high">Above $100</option>
+    </select>
+  </section>
+
+  <!-- Product Section -->
+  <section class="products" id="product-list"></section>
+
+  <!-- Cart Section -->
+  <section class="cart" id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button id="checkout-btn">Checkout</button>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter username">
+      <button id="submit-login">Login</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
